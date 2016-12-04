@@ -195,7 +195,7 @@ int main(int argc, char **argv)
       cv::resize(grabber->frame(), frame, displaySize);
       cv::resize(grabber->depth16bit(), depth, displaySize);
       cv::imshow("RGB + Depth", ZedGrabber::Mosaic::instance()->mosaic(frame, depth));
-      key = cv::waitKey(30);
+      key = cv::waitKey(1);
     }
     grabber->finish();
     return 0;
